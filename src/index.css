@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-board {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;      /* <— Horizontally center */
+    height: 100vh;            /* Full viewport height */
+    font-family: sans-serif;
+    background-color: #fff;   /* Optional: clean background */
+    padding-top: 5%;
+}
+  
+.main-board h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #333;
+}
+  
+.net-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
