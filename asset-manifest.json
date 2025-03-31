@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simple-net-checker/static/css/main.fedbbea3.css",
+    "main.js": "/simple-net-checker/static/js/main.25e2edbf.js",
+    "index.html": "/simple-net-checker/index.html",
+    "main.fedbbea3.css.map": "/simple-net-checker/static/css/main.fedbbea3.css.map",
+    "main.25e2edbf.js.map": "/simple-net-checker/static/js/main.25e2edbf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fedbbea3.css",
+    "static/js/main.25e2edbf.js"
+  ]
+}
