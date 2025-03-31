@@ -7,9 +7,9 @@ const GRID_SIZE = 8;
 
 const SimpleBoard = ({ indices }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [selection, setSelection] = useState(null); // 'yes' or 'no'
+    const [selection, setSelection] = useState(null);
     const [submitted, setSubmitted] = useState(false);
-    const [correctCount, setCorrectCount] = useState(0); // You can update this in your logic
+    const [correctCount, setCorrectCount] = useState(0);
     const [feedback, setFeedback] = useState('unknown');
 
     const currentCube = CUBE_NET_LIB[indices[currentIndex]];
@@ -24,7 +24,6 @@ const SimpleBoard = ({ indices }) => {
 
         setSubmitted(true);
 
-        // Placeholder — you can insert your answer checking logic here:
         const expectAnswer = CUBE_NET_LIB[indices[currentIndex]].isValid();
         const userIsCorrect = (selection === expectAnswer);
 
@@ -34,7 +33,6 @@ const SimpleBoard = ({ indices }) => {
         setFeedback(() => {
             return userIsCorrect ? 'Correct!' : 'Wrong...';
         });
-        //console.log(`User selected: ${selection}, Correct: ${userIsCorrect}`);
     };
 
     const handleNext = () => {
@@ -94,9 +92,8 @@ const SimpleBoard = ({ indices }) => {
         {submitted && (
             <div className="feedback-board" style={{ marginTop: '1rem' }}>
             <Space>
-                {/* You can replace this with your actual correctness logic */}
                 <span>Your answer ({selection ? 'Valid' : 'Invalid'}) is {feedback}</span>
-                <span>{/* C/T counter */}{correctCount}/{currentIndex + 1}</span>
+                <span>{correctCount}/{currentIndex + 1}</span>
                 <Button
                     type="default"
                     onClick={handleNext}
